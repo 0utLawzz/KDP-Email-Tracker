@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KDP Email Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Bright Mindful Pages</p>
+      <h1>KDP Email Dashboard</h1>
+    </div>
+    <p class="meta" id="syncMeta">Loading…</p>
+  </header>
+  <section class="stats" id="stats"></section>
+  <section class="filters">
+    <input id="q" type="search" placeholder="Search subject, summary, book code…" />
+    <select id="status">
+      <option value="">All statuses</option>
+      <option>Approved</option>
+      <option>Rejected</option>
+      <option>Review</option>
+      <option>Published</option>
+      <option>Action Required</option>
+      <option>Info</option>
+      <option>N/A</option>
+    </select>
+    <select id="type">
+      <option value="">All types</option>
+      <option>Alert</option>
+      <option>Notification</option>
+      <option>Review</option>
+      <option>Publishing</option>
+      <option>Payment</option>
+      <option>Metadata</option>
+      <option>Account</option>
+      <option>Other</option>
+    </select>
+  </section>
+  <section id="list" class="list"></section>
+  <script src="app.js"></script>
+</body>
+</html>
