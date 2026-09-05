@@ -1,12 +1,13 @@
 {
-  "lastSuccessfulRun": "2026-09-05T22:09:54Z",
+  "lastSuccessfulRun": "2026-09-05T22:17:00Z",
   "lastRunStatus": "success",
   "lastRunEmailsFound": 5,
-  "lastRunNewEmails": 1,
-  "lastRunDuplicatesSkipped": 4,
+  "lastRunNewEmails": 0,
+  "lastRunDuplicatesSkipped": 5,
   "lastRunErrors": 0,
-  "window": "incremental from 2026-09-05T21:39:00Z with overlap after:2026/09/04",
+  "window": "incremental from 2026-09-05T22:09:54Z with overlap after:2026/09/04",
   "source": "Gmail official KDP / Kindle Content Review inbound only + one TEST MODE synthetic record",
   "testMode": true,
-  "testEmailId": "TEST-KDP-20260906-001"
+  "testEmailId": "TEST-KDP-20260906-001",
+  "notes": "TEST MODE: synthetic injected before dedup; ID already present so skipped. emails.json unchanged."
 }
