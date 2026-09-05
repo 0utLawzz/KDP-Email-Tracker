@@ -1,10 +1,12 @@
 {
-  "lastSuccessfulRun": "2026-09-05T21:39:00Z",
+  "lastSuccessfulRun": "2026-09-05T22:09:54Z",
   "lastRunStatus": "success",
-  "lastRunEmailsFound": 4,
-  "lastRunNewEmails": 0,
+  "lastRunEmailsFound": 5,
+  "lastRunNewEmails": 1,
   "lastRunDuplicatesSkipped": 4,
   "lastRunErrors": 0,
-  "window": "incremental from 2026-09-05T21:24:32Z with overlap after:2026/09/04",
-  "source": "Gmail official KDP / Kindle Content Review inbound only"
+  "window": "incremental from 2026-09-05T21:39:00Z with overlap after:2026/09/04",
+  "source": "Gmail official KDP / Kindle Content Review inbound only + one TEST MODE synthetic record",
+  "testMode": true,
+  "testEmailId": "TEST-KDP-20260906-001"
 }
