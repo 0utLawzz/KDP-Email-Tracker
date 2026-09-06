@@ -1,17 +1,5 @@
 [
   {
-    "id": "TEST-KDP-20260906-001",
-    "emailDate": "2026-09-05T22:09:54Z",
-    "bookCode": "N/A",
-    "emailType": "Notification",
-    "status": "Info",
-    "subject": "[TEST] KDP New Book Notification",
-    "summary": "Controlled TEST MODE email used only to verify ingestion, deduplication, persistence, state update, commit, and dashboard pipeline.",
-    "body": "This is a controlled test email used only to verify the KDP email ingestion, deduplication, persistence, state update, commit, and dashboard pipeline.",
-    "gmailLink": "",
-    "loggedAt": "2026-09-05T22:09:54Z"
-  },
-  {
     "id": "1a0704fceaea4bdc",
     "emailDate": "2026-09-05T06:44:32Z",
     "emailType": "Review",

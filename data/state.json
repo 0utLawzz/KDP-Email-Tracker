@@ -1,11 +1,11 @@
 {
-  "lastSuccessfulRun": "2026-09-05T23:55:00Z",
+  "lastSuccessfulRun": "2026-09-06T00:00:00Z",
   "lastRunStatus": "success",
-  "lastRunEmailsFound": 4,
+  "lastRunEmailsFound": 0,
   "lastRunNewEmails": 0,
-  "lastRunDuplicatesSkipped": 4,
+  "lastRunDuplicatesSkipped": 0,
   "lastRunErrors": 0,
-  "window": "incremental from 2026-09-05T22:17:00Z with overlap after:2026/09/04",
-  "source": "Gmail official KDP / Kindle Content Review inbound only",
-  "notes": "No new inbound Amazon KDP emails since last successful run. emails.json unchanged (23 records). Outbound replies and Grok summaries excluded."
+  "window": "cleanup only — no Gmail sync",
+  "source": "manual cleanup of TEST-KDP-20260906-001",
+  "notes": "Removed only TEST-KDP-20260906-001. emails.json now contains 22 real KDP records. No Gmail sync and no new emails added."
 }
