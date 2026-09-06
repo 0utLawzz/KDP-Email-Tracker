@@ -1,11 +1,10 @@
 {
-  "lastSuccessfulRun": "2026-09-06T00:00:00Z",
+  "lastSuccessfulRun": "2026-09-06T00:31:00Z",
   "lastRunStatus": "success",
-  "lastRunEmailsFound": 0,
+  "lastRunEmailsFound": 4,
   "lastRunNewEmails": 0,
-  "lastRunDuplicatesSkipped": 0,
+  "lastRunDuplicatesSkipped": 4,
   "lastRunErrors": 0,
-  "window": "cleanup only — no Gmail sync",
-  "source": "manual cleanup of TEST-KDP-20260906-001",
-  "notes": "Removed only TEST-KDP-20260906-001. emails.json now contains 22 real KDP records. No Gmail sync and no new emails added."
+  "window": "overlap from 2026-09-04 (after lastSuccessfulRun 2026-09-06T00:00:00Z)",
+  "source": "Gmail inbound KDP only (kdp-no-reply / kindle-content-review)"
 }
