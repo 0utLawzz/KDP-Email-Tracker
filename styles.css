@@ -387,6 +387,88 @@ time {
   background: var(--panel);
 }
 
+/* ========== PAGINATION ========== */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 2.5rem;
+  background: var(--bg);
+  border-top: 3px solid var(--black);
+}
+
+.pagination-info {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(12, 12, 12, 0.65);
+}
+
+.pagination-info strong {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.page-btn {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.45rem 0.7rem;
+  min-width: 2.4rem;
+  background: var(--panel);
+  color: var(--black);
+  border: 2.5px solid var(--black);
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.page-btn:hover:not([disabled]):not(.active) {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #0C0C0C;
+  background: var(--bg-alt);
+}
+
+.page-btn:active:not([disabled]) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #0C0C0C;
+}
+
+.page-btn.active {
+  background: var(--accent);
+  color: #FAF6EE;
+  box-shadow: var(--shadow-accent);
+  cursor: default;
+}
+
+.page-btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.page-ellipsis {
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  color: rgba(12, 12, 12, 0.45);
+  padding: 0 0.2rem;
+  user-select: none;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .navbar {
@@ -399,12 +481,26 @@ time {
 
   .stats,
   .filters,
-  .list {
+  .list,
+  .pagination {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   .stat b {
     font-size: 1.6rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pagination-controls {
+    justify-content: center;
+  }
+
+  .pagination-info {
+    text-align: center;
   }
 }
