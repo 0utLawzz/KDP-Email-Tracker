@@ -1,25 +1,410 @@
-:root { --tide:#203B36; --leaf:#668C78; --sun:#E09B5E; --paper:#F8F5EF; --field:#D8E5DA; --ink:#1a2a27; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); }
-header { display:flex; justify-content:space-between; gap:1rem; align-items:flex-end; padding:2rem 1.5rem 1rem; background:var(--tide); color:var(--paper); }
-.eyebrow { margin:0; letter-spacing:.12em; text-transform:uppercase; font-size:.72rem; color:var(--sun); }
-h1 { margin:.2rem 0 0; font-weight:600; }
-.meta { margin:0; font-size:.85rem; color:var(--field); }
-.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:.75rem; padding:1rem 1.5rem; }
-.stat { background:#fff; border:1px solid var(--field); border-radius:10px; padding:.75rem; }
-.stat b { display:block; font-size:1.4rem; color:var(--tide); }
-.filters { display:flex; gap:.6rem; flex-wrap:wrap; padding:0 1.5rem 1rem; }
-.filters input, .filters select { padding:.55rem .7rem; border:1px solid var(--leaf); border-radius:8px; background:#fff; font:inherit; }
-.filters input { flex:1; min-width:220px; }
-.list { padding:0 1.5rem 3rem; display:grid; gap:.75rem; }
-.card { background:#fff; border-left:4px solid var(--leaf); border-radius:8px; padding:.9rem 1rem; box-shadow:0 1px 0 rgba(32,59,54,.06); }
-.card.Rejected { border-left-color:#b45a4a; }
-.card.Published { border-left-color:var(--leaf); }
-.card.ActionRequired { border-left-color:var(--sun); }
-.top { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-.badge { display:inline-block; font-size:.72rem; padding:.15rem .45rem; border-radius:999px; background:var(--field); color:var(--tide); margin-right:.35rem; }
-.subject { margin:.35rem 0 .2rem; font-size:1.05rem; }
-.summary { margin:0; color:#334; }
-.actions { margin-top:.55rem; font-size:.9rem; }
-a { color:#2b5d4e; }
-.empty { padding:2rem; text-align:center; color:#666; }
+/* Neo-Brutalism Theme – BrandEx v1.0
+   Exact specs from design reference. No approximations. */
+
+.theme-neobrutalism {
+  --bg: #F0E8D0;
+  --bg-alt: #E8DFC7;
+  --bg2: #0C0C0C;
+  --panel: #FAF6EE;
+  --panel-hover: #F0E8D0;
+  --black: #0C0C0C;
+  --border: #0C0C0C;
+  --accent: #C94A00;
+  --accent-primary: #C94A00;
+  --accent2: #0D9970;
+  --teal-lt: #0D9970;
+  --accent3: #D4A800;
+  --yellow: #D4A800;
+  --accent4: #0A6B52;
+  --teal: #0A6B52;
+
+  --border-thin: 2px solid #0C0C0C;
+  --border-thick: 3px solid #0C0C0C;
+  --radius: 0px;
+  --shadow: 5px 5px 0 #0C0C0C;
+  --shadow-sm: 3px 3px 0 #0C0C0C;
+  --shadow-lg: 8px 8px 0 #0C0C0C;
+  --shadow-accent: 5px 5px 0 #C94A00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--black);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: var(--bg2);
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--black);
+}
+
+.logo {
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-bright {
+  color: #FAF6EE;
+}
+
+.logo-dot {
+  color: var(--accent);
+}
+
+.logo-stories {
+  color: var(--accent2);
+}
+
+.nav-meta {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ========== HERO ========== */
+.hero {
+  padding: 2.5rem 1.5rem 1.5rem;
+  border-bottom: 3px solid var(--black);
+  background: var(--bg);
+}
+
+.eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: 1px;
+  line-height: 1;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+}
+
+.hero-sub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(12, 12, 12, 0.65);
+}
+
+/* ========== STATS ========== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border-bottom: 3px solid var(--black);
+}
+
+.stat {
+  background: var(--panel);
+  border: 3px solid var(--black);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 1rem 1.1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #0C0C0C;
+}
+
+.stat b {
+  display: block;
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--black);
+  margin-bottom: 0.25rem;
+}
+
+.stat span {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(12, 12, 12, 0.6);
+}
+
+/* ========== FILTERS ========== */
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg);
+  border-bottom: 3px solid var(--black);
+}
+
+.filters input,
+.filters select {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 0.85rem;
+  background: var(--panel);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.filters input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.filters input::placeholder {
+  color: rgba(12, 12, 12, 0.35);
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--accent);
+  border-width: 2.5px;
+  box-shadow: 0 0 0 2px rgba(201, 74, 0, 0.20);
+}
+
+.filters select {
+  cursor: pointer;
+  min-width: 150px;
+}
+
+/* ========== LIST / CARDS ========== */
+.list {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--panel);
+  border: 3px solid var(--black);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #0C0C0C;
+}
+
+.card.Rejected {
+  border-left: 6px solid #b45a4a;
+}
+
+.card.Published {
+  border-left: 6px solid var(--accent2);
+}
+
+.card.ActionRequired {
+  border-left: 6px solid var(--accent);
+}
+
+.card.Approved {
+  border-left: 6px solid var(--accent4);
+}
+
+.card.Review {
+  border-left: 6px solid var(--accent);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid;
+  border-radius: 0;
+  margin-right: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Status badge colors per theme */
+.badge.status-Approved {
+  border-color: #0A6B52;
+  color: #0A6B52;
+  background: rgba(10, 107, 82, 0.12);
+}
+
+.badge.status-Review {
+  border-color: #C94A00;
+  color: #C94A00;
+  background: rgba(201, 74, 0, 0.12);
+}
+
+.badge.status-Published {
+  border-color: #8B2FC9;
+  color: #8B2FC9;
+  background: rgba(139, 47, 201, 0.12);
+}
+
+.badge.status-Rejected {
+  border-color: #b45a4a;
+  color: #b45a4a;
+  background: rgba(180, 90, 74, 0.12);
+}
+
+.badge.status-ActionRequired {
+  border-color: #C94A00;
+  color: #C94A00;
+  background: rgba(201, 74, 0, 0.12);
+}
+
+.badge.status-Draft,
+.badge.status-N\/A,
+.badge.status-Info {
+  border-color: rgba(12, 12, 12, 0.40);
+  color: #555555;
+  background: rgba(12, 12, 12, 0.06);
+}
+
+.badge.type {
+  border-color: var(--black);
+  color: var(--black);
+  background: rgba(12, 12, 12, 0.06);
+}
+
+.badge.code {
+  border-color: var(--accent2);
+  color: var(--accent4);
+  background: rgba(13, 153, 112, 0.10);
+}
+
+time {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  color: rgba(12, 12, 12, 0.55);
+  white-space: nowrap;
+}
+
+.subject {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0.3rem 0 0.35rem;
+  line-height: 1.3;
+}
+
+.summary {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: rgba(12, 12, 12, 0.75);
+  margin: 0;
+}
+
+.actions {
+  margin-top: 0.75rem;
+}
+
+.actions a {
+  display: inline-block;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #FAF6EE;
+  background: var(--accent);
+  border: 2.5px solid var(--black);
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.actions a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 #0C0C0C;
+}
+
+.actions a:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #0C0C0C;
+}
+
+.empty {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  color: rgba(12, 12, 12, 0.5);
+  border: 3px dashed rgba(12, 12, 12, 0.25);
+  border-radius: 6px;
+  background: var(--panel);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 1.75rem 1rem 1.25rem;
+  }
+
+  .stats,
+  .filters,
+  .list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .stat b {
+    font-size: 1.6rem;
+  }
+}
