@@ -1,5 +1,17 @@
 [
   {
+    "id": "1a07c557e7a663f7",
+    "emailDate": "2026-09-07T14:46:12Z",
+    "bookCode": "N/A",
+    "emailType": "Publishing",
+    "status": "Action Required",
+    "subject": "Attention needed: Please review your title, Fitness Instructor Session Planner & Client Tracker",
+    "summary": "Print QA: back-cover text too close to the edges on Fitness Instructor Session Planner & Client Tracker. Move all cover text at least 0.375 in (9.5 mm) from all edges before the book can be published.",
+    "body": "We checked your files and found issues you need to fix before your book can be published on KDP: Cover — Text on your back cover is too close to the edges, which could lead to it being cut off during printing. Move all text at least 0.375 inches (9.5 mm) away from all edges of the cover.",
+    "gmailLink": "https://mail.google.com/mail/u/0/#inbox/1a07c557e7a663f7",
+    "loggedAt": "2026-09-07T21:45:00Z"
+  },
+  {
     "id": "1a075d4b0002d17f",
     "emailDate": "2026-09-06T08:27:47Z",
     "bookCode": "N/A",
