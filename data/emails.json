@@ -1,5 +1,29 @@
 [
   {
+    "id": "1a086059bfe67ebc",
+    "emailDate": "2026-09-09T11:55:09Z",
+    "bookCode": "N/A",
+    "emailType": "Publishing",
+    "status": "Action Required",
+    "subject": "Attention needed: Please review your title, IBS & Low-FODMAP Journal",
+    "summary": "Print QA: spine text too close to the edges on IBS & Low-FODMAP Journal. Move all spine text at least 0.375 in (9.6 mm) from top and bottom edges before the book can be published.",
+    "body": "We checked your files and found issues you need to fix before your book can be published on KDP: Cover — Text on the spine is too close to the edges, which could lead to it being cut off during printing. Move all spine text at least 0.375 inches (9.6 mm) away from both the top and bottom edges of the cover.",
+    "gmailLink": "https://mail.google.com/mail/u/0/#inbox/1a086059bfe67ebc",
+    "loggedAt": "2026-09-09T11:58:00Z"
+  },
+  {
+    "id": "1a083474c83e74b1",
+    "emailDate": "2026-09-08T23:08:02Z",
+    "bookCode": "N/A",
+    "emailType": "Review",
+    "status": "Rejected",
+    "subject": "Alert from Amazon",
+    "summary": "Content review rejected Perimenopause Daily Log: 12 Weeks of Symptoms, Patterns & Appointment Notes (PRI-MWVSXW3XV03) for disappointing customer experience.",
+    "body": "Thank you for the submission of Perimenopause Daily Log: 12 Weeks of Symptoms, Patterns & Appointment Notes by Bright Mindful Pages (ID: PRI-MWVSXW3XV03). Based on our review, we won't be accepting your submission for publication because the book(s) might result in a disappointing customer experience.",
+    "gmailLink": "https://mail.google.com/mail/u/0/#inbox/1a083474c83e74b1",
+    "loggedAt": "2026-09-09T11:58:00Z"
+  },
+  {
     "id": "1a07ebecdd141325",
     "emailDate": "2026-09-08T02:00:28Z",
     "bookCode": "N/A",
