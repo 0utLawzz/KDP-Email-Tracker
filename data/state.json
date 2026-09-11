@@ -1,10 +1,10 @@
 {
-  "lastSuccessfulRun": "2026-09-10T21:40:00Z",
+  "lastSuccessfulRun": "2026-09-11T21:39:00Z",
   "lastRunStatus": "success",
-  "lastRunEmailsFound": 3,
-  "lastRunNewEmails": 1,
-  "lastRunDuplicatesSkipped": 2,
+  "lastRunEmailsFound": 1,
+  "lastRunNewEmails": 0,
+  "lastRunDuplicatesSkipped": 1,
   "lastRunErrors": 0,
-  "window": "overlap from 2026-09-08 after lastSuccessfulRun 2026-09-09T21:40:00Z",
+  "window": "overlap from 2026-09-10 after lastSuccessfulRun 2026-09-10T21:40:00Z",
   "source": "Gmail inbound KDP only (kdp-no-reply / kindle-content-review)"
 }
