@@ -1,5 +1,17 @@
 [
   {
+    "id": "1a095dc144694ab3",
+    "emailDate": "2026-09-12T13:43:43Z",
+    "bookCode": "N/A",
+    "emailType": "Review",
+    "status": "Rejected",
+    "subject": "Alert from Amazon’s Content Review Team – Case #51713659",
+    "summary": "Appeal Case #51713659 upheld. Perimenopause Daily Log (PRI-MWVSXW3XV03) will not be published.",
+    "body": "Thanks for your message regarding Perimenopause Daily Log: 12 Weeks of Symptoms, Patterns & Appointment Notes — ID: PRI-MWVSXW3XV03. After further review, we've decided to uphold our previous decision and will not be publishing your title(s) at this time because the content might result in a disappointing customer experience.",
+    "gmailLink": "https://mail.google.com/mail/u/0/#inbox/1a095dc144694ab3",
+    "loggedAt": "2026-09-12T21:39:35Z"
+  },
+  {
     "id": "1a08a9949d60a773",
     "emailDate": "2026-09-10T09:14:56Z",
     "bookCode": "N/A",
